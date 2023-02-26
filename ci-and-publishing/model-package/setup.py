@@ -6,9 +6,9 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 # Package meta-data.
-NAME = 'titanic-classification-model'
+NAME = 'camzis-classification-model'
 DESCRIPTION = "Example classification model package from Titanic dataset."
-URL = "https://github.com/mamadcamzis/deploying-machine-learning-models/tree/master/production-model-package"
+URL = "https://github.com/mcamara-aneo/ml-model-deployment/tree/main/ci-and-publishing/model-package"
 EMAIL = "camara0388@gmail.com"
 AUTHOR = "Mamadou Camara"
 REQUIRES_PYTHON = ">=3.6.0"
