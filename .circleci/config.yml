@@ -232,12 +232,12 @@ jobs:
   #    #       ./scripts/publish_model.sh ./packages/neural_network_model/
 
 
-# tags_only: &tags_only
-#   filters:
-#     branches:
-#       ignore: /.*/
-#     tags:
-#       only: /^.*/
+tags_only: &tags_only
+  filters:
+    branches:
+      ignore: /.*/
+    tags:
+      only: /^.*/
 
 workflows:
   version: 2
