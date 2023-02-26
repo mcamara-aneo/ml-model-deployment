@@ -1,0 +1,15 @@
+[{
+	
+		"PassengerId": 894,
+		"Pclass": 2,
+		"Name": "Mr. Thomas Francis",
+		"Sex": "male",
+		"Age": 35,
+		"SibSp": "1",
+		"Parch": "0",
+		"Ticket": "SC/AH 3085",
+		"Fare": 9.225,
+		"Cabin": "B45",
+		"Embarked": "S"
+	  
+}]
