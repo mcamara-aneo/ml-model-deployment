@@ -1,7 +1,7 @@
 -r requirements.txt
 
 # testing requirements
-pytest>=6.2.3,<6.3.0
+pytest<7.1.0,>=7.0.1
 requests>=2.23.0,<2.24.0
 
 # repo maintenance tooling

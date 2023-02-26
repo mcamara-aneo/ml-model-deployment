@@ -2,9 +2,9 @@ from typing import Generator
 
 import pandas as pd
 import pytest
-from fastapi.testclient import TestClient
 from classification_model.config.core import config
 from classification_model.processing.data_manager import load_dataset
+from fastapi.testclient import TestClient
 
 from app.main import app
 
