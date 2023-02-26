@@ -83,7 +83,7 @@ jobs:
           name: Build image
           command: |
             sudo curl https://cli-assets.heroku.com/install.sh | sh
-            cd Sdeploying-with-containers && make build-ml-api-heroku
+            cd deploying-with-containers && make build-ml-api-heroku
       - run:
           name: Push Image to Heroku
           command: |
