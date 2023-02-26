@@ -3,11 +3,11 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
+from classification_model import __version__ as model_version
+from classification_model.predict import make_prediction
 from fastapi import APIRouter, HTTPException
 from fastapi.encoders import jsonable_encoder
 from loguru import logger
-from classification_model import __version__ as model_version
-from classification_model.predict import make_prediction
 
 from app import __version__, schemas
 from app.config import settings
@@ -28,9 +28,9 @@ def health() -> dict:
 
 
 @api_router.post("/predict", response_model=schemas.PredictionResults, status_code=200)
-async def predict(input_data: schemas.MultipleHouseDataInputs) -> Any:
+async def predict(input_data: schemas.MultiplePassengerDataInputs) -> Any:
     """
-    Make house price predictions with the TID regression model
+    Make titanic survivor predictions with the Camzis classification model
     """
 
     input_df = pd.DataFrame(jsonable_encoder(input_data.inputs))
@@ -45,5 +45,6 @@ async def predict(input_data: schemas.MultipleHouseDataInputs) -> Any:
         raise HTTPException(status_code=400, detail=json.loads(results["errors"]))
 
     logger.info(f"Prediction results: {results.get('predictions')}")
+    logger.info(f"Prediction Proba results: {results.get('predict_proba')}")
 
     return results
