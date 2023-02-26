@@ -70,8 +70,6 @@ jobs:
           name: Publish model to Gemfury
           command: |
             tox -e publish_model
-
-
   deploy_app_container_in_heroku:
     <<: *defaults
     steps:
