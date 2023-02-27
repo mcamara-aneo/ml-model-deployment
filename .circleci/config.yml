@@ -94,6 +94,18 @@ jobs:
           command: |
             cd section-03-deploying-with-containers && make release-heroku
 
+      - run:
+          name: Build AWS
+          command: |
+            #sudo curl https://cli-assets.heroku.com/install.sh | sh
+            cd section-03-deploying-with-containers && make build-ml-api-aws
+
+      # - run:
+      #     name: Push Image to AWS
+      #     command: |
+      #       # Push the built container to the Heroku image registry
+      #       cd section-03-deploying-with-containers && make push-ml-api-aws
+      
   test_classification_model_py37:
     docker:
       - image: circleci/python:3.7.6
