@@ -3,6 +3,7 @@ COMMIT_ID=$(shell git rev-parse HEAD)
 
 
 build-ml-api-heroku:
+	git pull
 	docker build --build-arg PIP_EXTRA_INDEX_URL=${PIP_EXTRA_INDEX_URL} -t registry.heroku.com/$(NAME)/web:$(COMMIT_ID) .
 
 push-ml-api-heroku:
