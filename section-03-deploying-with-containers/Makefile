@@ -14,7 +14,7 @@ release-heroku: heroku-login
 .PHONY: heroku-login build-ml-api-heroku push-ml-api-heroku
 
 build-ml-api-aws:
-	docker build --tag PIP_EXTRA_INDEX_URL=${PIP_EXTRA_INDEX_URL}:$(NAME):$(COMMIT_ID)  .
+	docker build --build-arg PIP_EXTRA_INDEX_URL=${PIP_EXTRA_INDEX_URL} -t $(NAME):$(COMMIT_ID)  .
 
 push-ml-api-aws:
 	docker push ${AWS_ACCOUNT_ID}.dkr.ecr.eu-west-3.amazonaws.com/$(NAME):$(COMMIT_ID)
