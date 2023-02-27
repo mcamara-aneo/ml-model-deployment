@@ -28,7 +28,7 @@ fetch_data: &fetch_data
       ./scripts/fetch_kaggle_dataset.sh
 
 jobs:
-  section_02_ci_and_publishing:
+  section_02_test_app:
     <<: *defaults
     working_directory: ~/project/section-02-ci-and-publishing/titanic-survivor-api
     steps:
@@ -268,7 +268,7 @@ workflows:
   section_02:
     jobs:
       - section_02_test_app
-      - section_07_deploy_app_to_heroku:
+      - section_02_deploy_app_to_heroku:
           requires:
             - section_02_test_app
           filters:
