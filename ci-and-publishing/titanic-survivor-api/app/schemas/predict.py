@@ -11,20 +11,6 @@ class PredictionResults(BaseModel):
     predict_proba: Optional[List[float]]
 
 
-# class TitanicDataInputSchema(BaseModel):
-#     PassengerId: Optional[int]
-#     Pclass: Optional[str]
-#     Name: Optional[str]
-#     Sex: Optional[str]
-#     Age: Optional[float]
-#     SibSp: Optional[str]
-#     Parch: Optional[str]
-#     Ticket: Optional[str]
-#     Fare: Optional[float]
-#     Cabin: Optional[str]
-#     Embarked: Optional[str]
-
-
 class MultiplePassengerDataInputs(BaseModel):
     inputs: List[TitanicDataInputSchema]
 
