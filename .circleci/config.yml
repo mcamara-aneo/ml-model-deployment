@@ -48,7 +48,7 @@ jobs:
       - run:
           name: Deploy to Heroku
           command: |
-            git subtree push --prefix section-02-ci-and-publishing/titanic-survivor-api https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+            git subtree push --prefix section-02-ci-and-publishing/titanic-survivor-api https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
 
   section_02_test_and_upload_classification_model:
     <<: *defaults
