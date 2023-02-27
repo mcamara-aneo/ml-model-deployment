@@ -4,7 +4,8 @@ Deploying ML Model
  - heroku login
  - heroku create  (to create an app with heroku cli)
  - git subtree push --prefix ci-and-publishing/titanic-survivor-api heroku master
- 2. Deploy to Docker and AWS ECS
+ 2. Deploy to Docker Container
+ 3. Deploy to to AWS ECS
 
 
  [![CircleCI](https://dl.circleci.com/status-badge/img/gh/mcamara-aneo/ml-model-deployment/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/mcamara-aneo/ml-model-deployment/tree/main)
