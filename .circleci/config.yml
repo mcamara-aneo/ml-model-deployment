@@ -270,7 +270,7 @@ workflows:
       #- section_02_test_app
       - section_02_deploy_app_to_heroku:
           requires:
-            - section_02_test_app
+          #  - section_02_test_app
           filters:
             branches:
               only:
